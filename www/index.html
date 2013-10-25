@@ -42,8 +42,11 @@
             </footer>
         </div>
         <script>
-        // Initialize a new Kendo Mobile Application
-        var app = new kendo.mobile.Application();
+            var app = new kendo.mobile.Application(document.body, 
+            {
+                //  Platform can be one of "ios", "ios7", "android", "blackberry", "wp", "meego"
+                platform:'ios'
+            });
         </script>
     </body>
 </html>
