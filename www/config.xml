@@ -1,52 +1,75 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.macadamian.intelligentInsights" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Intelligent</name>
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.macadamian.phoneGapTest"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <name>PhoneGap Test</name>
+
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Testing phoneGap 
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+
+    <author href="http://www.macadamian.com" email="mrochette@macadamian.com">
+        Michael Rochette
     </author>
-    <feature name="http://api.phonegap.com/1.0/device" />
-    <preference name="permissions" value="none" />
-    <preference name="orientation" value="default" />
-    <preference name="target-device" value="universal" />
-    <preference name="fullscreen" value="true" />
-    <preference name="webviewbounce" value="true" />
-    <preference name="prerendered-icon" value="true" />
-    <preference name="stay-in-webview" value="false" />
-    <preference name="ios-statusbarstyle" value="black-opaque" />
-    <preference name="detect-data-types" value="true" />
-    <preference name="exit-on-suspend" value="false" />
-    <preference name="show-splash-screen-spinner" value="true" />
-    <preference name="auto-hide-splash-screen" value="true" />
-    <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="7" />
-    <preference name="android-installLocation" value="auto" />
-    <icon src="icon.png" />
-    <icon gap:density="ldpi" gap:platform="android" src="res/icon/android/icon-36-ldpi.png" />
-    <icon gap:density="mdpi" gap:platform="android" src="res/icon/android/icon-48-mdpi.png" />
-    <icon gap:density="hdpi" gap:platform="android" src="res/icon/android/icon-72-hdpi.png" />
-    <icon gap:density="xhdpi" gap:platform="android" src="res/icon/android/icon-96-xhdpi.png" />
-    <icon gap:platform="blackberry" src="res/icon/blackberry/icon-80.png" />
-    <icon gap:platform="blackberry" gap:state="hover" src="res/icon/blackberry/icon-80.png" />
-    <icon gap:platform="ios" height="57" src="res/icon/ios/icon-57.png" width="57" />
-    <icon gap:platform="ios" height="72" src="res/icon/ios/icon-72.png" width="72" />
-    <icon gap:platform="ios" height="114" src="res/icon/ios/icon-57-2x.png" width="114" />
-    <icon gap:platform="ios" height="144" src="res/icon/ios/icon-72-2x.png" width="144" />
-    <icon gap:platform="webos" src="res/icon/webos/icon-64.png" />
-    <icon gap:platform="winphone" src="res/icon/windows-phone/icon-48.png" />
-    <icon gap:platform="winphone" gap:role="background" src="res/icon/windows-phone/icon-173.png" />
-    <gap:splash gap:density="ldpi" gap:platform="android" src="res/screen/android/screen-ldpi-portrait.png" />
-    <gap:splash gap:density="mdpi" gap:platform="android" src="res/screen/android/screen-mdpi-portrait.png" />
-    <gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/screen-hdpi-portrait.png" />
-    <gap:splash gap:density="xhdpi" gap:platform="android" src="res/screen/android/screen-xhdpi-portrait.png" />
-    <gap:splash gap:platform="blackberry" src="res/screen/blackberry/screen-225.png" />
-    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-iphone-portrait.png" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.png" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
-    <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
-    <access origin="http://127.0.0.1*" />
     <content src="index.html" />
+    <access origin="*" />
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="blackberry" />
+
+    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="true" />
+     <preference name="webviewbounce" value="true" />
+    <preference name="BackgroundColor" value="0xff313131"/>
+    
+    <!-- app icons -->
+
+        <!-- default icon -->
+        <icon src="icon.png" />
+    
+        <!-- iOS icons -->
+        <icon src="icons/ios/icon.png" gap:platform="ios" width="57" height="57" />
+        <icon src="icons/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+        <icon src="icons/ios/icon_at_2x.png" gap:platform="ios" width="114" height="114" />
+        <icon src="icons/ios/icon-72_at_2x.png" gap:platform="ios" width="144" height="144" />
+    
+        <!-- android icons -->
+        <icon src="icons/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+        <icon src="icons/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+        <icon src="icons/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+        <icon src="icons/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    
+        <!-- blackberry icons -->
+        <icon src="icons/blackberry10/icon.png" gap:platform="blackberry" />
+        <icon src="icons/blackberry10/icon_hover.png" gap:platform="blackberry" gap:state="hover"/>
+
+    <!-- splash screens -->
+
+        <!-- default splash screen -->
+        <gap:splash src="splash.png" />
+
+        <!-- iOS splash screen -->
+        <gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
+        <gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
+        <gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
+        <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="748" />
+        <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1004" />
+        
+        <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+        <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
+        <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
+
+        <!-- android splash screen -->
+        <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+        <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+        <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+        <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+       
+        <!-- blackberry splash screen -->
+        <gap:splash src="splash/blackberry10/splash.png" gap:platform="blackberry" />
 </widget>
