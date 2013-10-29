@@ -14,24 +14,28 @@
         <script src="lib/kendo.mobile.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <div data-role="layout" data-id="mobile-view">
-            <header data-role="header">
-                <div data-role="navbar">
-                    <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
-                    <span data-role="view-title"></span>
-                    <a data-align="right" data-role="button" class="nav-button" href="#index">Index</a>
-                </div>
-            </header>
+        <div data-role="layout" data-id="mobile-view" data-role="scroller" data-use-native="true">
+            <footer data-role="footer">
+                <div data-role="tabstrip">
+                    <a data-icon="home" href="pages/home.html">Home</a>
+                    <a data-icon="settings" href="pages/settings.html">Settings</a>
+                </div> 
+            </footer>
         </div>
-
+        
         <script>
             var app = new kendo.mobile.Application(document.body, 
             {
                 //  Platform can be one of "ios", "ios7", "android", "blackberry", "wp", "meego"
                 //  platform:'ios',
+
                 //  useNativeScrolling: true,
-                //  skin: "float",
+
+                //  sets the transition between different views
+                //  options: slide, zoom, fade and overlay
                 transition: "slide",
+
+                // sets the initial view when opening the app
                 initial: "pages/home.html",
             });
         </script>
