@@ -1,13 +1,21 @@
-<div data-role="view" id="remoteview" data-layout="mobile-view" data-title="Remote View">
-    <h2>Settings</h2>
-    <p>Change languages</p>
-    <ul data-role="listview">
-        <li>Foo</li>
-        <li>Bar</li>
-    </ul>
-    <script>
-    function initListView(e) {
-        e.view.element.find("#listView").kendoMobileListView();
-    }
-    </script>
+<div data-role="view" id="home" data-layout="mobile-view" data-title="Settings">
+    
+    <header data-role="header">
+        <div data-role="navbar">
+            <span data-role="view-title"></span>
+        </div>
+    </header>
+    <article>
+        <h2>Change languages</h2>
+        <ul data-role="listview">
+            <li>English</li>
+            <li>French</li>
+        </ul>
+    </article>
+    <footer data-role="footer">
+        <div data-role="tabstrip">
+            <a href="pages/home.html">Home</a> 
+            <a href="pages/settings.html">Settings</a>
+        </div> 
+    </footer>
 </div>

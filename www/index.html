@@ -14,102 +14,26 @@
         <script src="lib/kendo.mobile.min.js" type="text/javascript"></script>
     </head>
     <body>
-        <!-- Kendo Mobile View -->
-        <div data-role="view" data-title="View" id="index">
-            <!--Kendo Mobile Header -->
+        <div data-role="layout" data-id="mobile-view">
             <header data-role="header">
-                <!--Kendo Mobile NavBar widget -->
                 <div data-role="navbar">
-                    <a data-role="backbutton" data-align="left">Back</a>
-                    My View Title
-                    <a data-role="button" data-align="right">About</a>
+                    <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+                    <span data-role="view-title"></span>
+                    <a data-align="right" data-role="button" class="nav-button" href="#index">Index</a>
                 </div>
             </header>
-                <div class="chart-wrapper" style="margin: auto;">
-        <div id="chart"></div>
-    </div>
-    <script>
-        function createChart() {
-            $("#chart").kendoChart({
-                dataSource: {
-                    transport: {
-                        read: {
-                            url: "data/spain-electricity.json",
-                            dataType: "json"
-                        }
-                    },
-                    sort: {
-                        field: "year",
-                        dir: "asc"
-                    }
-                },
-                title: {
-                    text: "Spain electricity production (GWh)"
-                },
-                legend: {
-                    position: "top"
-                },
-                seriesDefaults: {
-                    type: "column"
-                },
-                series:
-                [{
-                    field: "nuclear",
-                    name: "Nuclear"
-                }, {
-                    field: "hydro",
-                    name: "Hydro"
-                }, {
-                    field: "wind",
-                    name: "Wind"
-                }],
-                categoryAxis: {
-                    field: "year",
-                    labels: {
-                        rotation: -90
-                    },
-                    majorGridLines: {
-                        visible: false
-                    }
-                },
-                valueAxis: {
-                    labels: {
-                        format: "N0"
-                    },
-                    majorUnit: 10000,
-                    line: {
-                        visible: false
-                    }
-                },
-                tooltip: {
-                    visible: true,
-                    format: "N0"
-                }
-            });
-        }
-
-        $(document).ready(createChart);
-        $(document).bind("kendo:skinChange", createChart);
-    </script>
-                    
-            <!--Kendo Mobile Footer -->
-            <footer data-role="footer">
-                <!-- Kendo Mobile TabStrip widget -->
-                <div data-role="tabstrip">
-                    <a data-icon="home" href="index.html">Home</a>
-                    <a data-icon="settings" href="pages/settings.html">Settings</a>
-                </div>
-            </footer>
         </div>
-            
+
         <script>
             var app = new kendo.mobile.Application(document.body, 
             {
                 //  Platform can be one of "ios", "ios7", "android", "blackberry", "wp", "meego"
-                  platform:'ios'
-                //useNativeScrolling: true
+                //  platform:'ios',
+                //  useNativeScrolling: true,
+                //  skin: "float",
+                transition: "slide",
+                initial: "pages/home.html",
             });
-            var navbar = $("#navbar").kendoMobileNavBar();
         </script>
     </body>
 </html>
