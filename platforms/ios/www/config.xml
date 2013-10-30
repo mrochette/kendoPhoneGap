@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.macadamian.phoneGapTest"
+        versionCode="10" 
+        version   = "1.0.0">
+
+    <name>Macadamian Multiplatform</name>
+
+    <description>
+        Testing phoneGap 
+    </description>
+
+    <author href="http://www.macadamian.com" email="mrochette@macadamian.com">
+        Michael Rochette
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+
+    <gap:platform name="ios" />
+    <gap:platform name="android" />
+    <gap:platform name="blackberry" />
+
+    <preference name="phonegap-version" value="2.9.0" />
+    <preference name="orientation" value="portrait" />
+    <preference name="fullscreen" value="true" />
+     <preference name="webviewbounce" value="true" />
+    <preference name="BackgroundColor" value="0xff313131"/>
+    
+    <!-- app icons -->
+
+        <!-- default icon -->
+        <icon src="icon.png" />
+    
+        <!-- iOS icons -->
+        <icon src="icon/ios/icon-57.png" gap:platform="ios" width="57" height="57" />
+        <icon src="icon/ios/icon-72.png" gap:platform="ios" width="72" height="72" />
+        <icon src="icon/ios/icon-57-2x.png" gap:platform="ios" width="114" height="114" />
+        <icon src="icon/ios/icon-72-2x.png" gap:platform="ios" width="144" height="144" />
+    
+        <!-- android icons -->
+        <icon src="icon/android/icon-36-ldpi.png" gap:platform="android" gap:density="ldpi" />
+        <icon src="icon/android/icon-48-mdpi.png" gap:platform="android" gap:density="mdpi" />
+        <icon src="icon/android/icon-72-hdpi.png" gap:platform="android" gap:density="hdpi" />
+        <icon src="icon/android/icon-96-xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+    
+        <!-- blackberry icons -->
+        <icon src="icon/blackberry10/icon-80.png" gap:platform="blackberry" />
+
+    <!-- splash screens -->
+
+        <!-- default splash screen -->
+        <gap:splash src="splash.png" />
+
+        <!-- iOS splash screen -->
+        <gap:splash src="splash/ios/Default.png" gap:platform="ios" width="320" height="480" />
+        <gap:splash src="splash/ios/Default_at_2x.png" gap:platform="ios" width="640" height="960" />
+        <gap:splash src="splash/ios/Default_iphone5.png" gap:platform="ios" width="640" height="1136" />
+        <gap:splash src="splash/ios/Default-Landscape.png" gap:platform="ios" width="1024" height="748" />
+        <gap:splash src="splash/ios/Default-Portrait.png" gap:platform="ios" width="768" height="1004" />
+        
+        <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+        <gap:splash src="splash/ios/Default-Landscape_at_2x.png" gap:platform="ios" width="2048" height="1496" />
+        <gap:splash src="splash/ios/Default-Portrait_at_2x.png" gap:platform="ios" width="1536" height="2008" />
+
+        <!-- android splash screen -->
+        <gap:splash src="splash/android/ldpi.png" gap:platform="android" gap:density="ldpi" />
+        <gap:splash src="splash/android/mdpi.png" gap:platform="android" gap:density="mdpi" />
+        <gap:splash src="splash/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
+        <gap:splash src="splash/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+       
+        <!-- blackberry splash screen -->
+        <gap:splash src="splash/blackberry10/splash.png" gap:platform="blackberry" />
+</widget>
